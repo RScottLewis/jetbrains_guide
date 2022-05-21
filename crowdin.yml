@@ -1,0 +1,13 @@
+"commit_message": "[Crowdin] New translations %original_file_name% (%language%)"
+"append_commit_message": false
+
+files:
+  - source: sites/**/contents
+    ignore:
+      - '*.jpg'
+      - '*.png'
+      - README.txt
+      - '*.svg'
+      - '*.gif'
+      - '*.jpeg'
+    translation: '%original_path%/%original_file_name%'

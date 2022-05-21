@@ -1,0 +1,19 @@
+type Tutorial implements Node & Resource {
+    author: Author @link(by: "label")
+    body: String! @parentBody
+    cardThumbnail: File @fileByRelativePath
+    date: Date @dateformat(formatString: "YYYY-MM-DD")
+    id: ID!
+    parent: Node
+    tutorialItems: [Resource] @link(by: "slug")
+    videoBottom: Boolean
+    slug: String!
+    subtitle: String
+    excerpt: String
+    resourceType: String
+    products: [Product] @link(by: "label")
+    technologies: [Technology] @link(by: "label")
+    thumbnail: File @fileByRelativePath
+    title: String!
+    topics: [Topic] @link(by: "label")
+}
